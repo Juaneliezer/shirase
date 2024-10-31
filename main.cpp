@@ -7,6 +7,8 @@ int main() {
   int ch;
 
   initscr();
+
+  // init_pair(2, COLOR_WHITE, COLOR_BLACK);
   raw();
   keypad(stdscr, TRUE);
 

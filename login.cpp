@@ -1,4 +1,5 @@
 #include <ncurses.h>
+#include <stdlib.h>
 void login() {
   int starx, starty; // i dont know why i put this variables
 
@@ -27,7 +28,7 @@ void login() {
   wgetstr(winlog, key);
   // finishing the window login
   getch();
-  wrefresh(winlog);
   delwin(winlog);
+  wrefresh(winlog);
   delete[] key;
 }

@@ -18,7 +18,9 @@ int main() {
   if (ch == KEY_F(3)) {
     printw("F3 key pressed");
     login();
+    refresh();
   }
+  printw("the stdscr was refreshed");
 
   refresh();
   getch();

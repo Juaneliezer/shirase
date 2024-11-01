@@ -1,4 +1,5 @@
 #include "login.cpp"
+#include <vector>
 
 #include <iostream>
 #include <ncurses.h>
@@ -21,5 +22,6 @@ int main() {
 
   refresh();
   getch();
+
   endwin();
 }

@@ -7,7 +7,8 @@ void login() {
   init_pair(1, COLOR_BLACK, COLOR_WHITE);
   // wattron(winlog, A_STANDOUT | A_UNDERLINE | A_INVIS);
   // wattrset(winlog, 1);
-  wattron(winlog, COLOR_PAIR(1));
+  // wattron(winlog, COLOR_PAIR(1));
+
   box(winlog, 0, 0);
   wbkgd(winlog, COLOR_PAIR(1));
 
@@ -20,7 +21,10 @@ void login() {
   noecho();
   mvwprintw(winlog, 7, 3, "anilist key\n");
   mvwprintw(winlog, 8, 3, "|");
-  char key[120];
+  char *key = new char[1500];
   wgetstr(winlog, key);
   wrefresh(winlog);
+  getch();
+  delwin(winlog);
+  delete[] key;
 }

@@ -6,10 +6,8 @@ void login() {
   // setting the space for the window login
   WINDOW *winlog = newwin(15, 50, 17, 67);
   start_color(); // maybe i will have to change this
+  use_default_colors();
   init_pair(1, COLOR_BLACK, COLOR_WHITE);
-  // wattron(winlog, A_STANDOUT | A_UNDERLINE | A_INVIS);
-  // wattrset(winlog, 1);
-  // wattron(winlog, COLOR_PAIR(1));
 
   // setting the drawing of the window
   box(winlog, 0, 0);
@@ -25,10 +23,13 @@ void login() {
   mvwprintw(winlog, 7, 3, "anilist key\n");
   mvwprintw(winlog, 8, 3, "|");
   char *key = new char[1500];
+
   wgetstr(winlog, key);
-  // finishing the window login
-  getch();
-  delwin(winlog);
+  //   finishing the window login
+  wbkgdset(stdscr, ' ');
   wrefresh(winlog);
+  delwin(winlog);
+  getch();
   delete[] key;
+  clear();
 }

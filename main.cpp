@@ -8,8 +8,6 @@ int main() {
   int ch;
 
   initscr();
-
-  // init_pair(2, COLOR_WHITE, COLOR_BLACK);
   raw();
   keypad(stdscr, TRUE);
 
@@ -18,6 +16,7 @@ int main() {
   if (ch == KEY_F(3)) {
     printw("F3 key pressed");
     login();
+
     refresh();
   }
   printw("the stdscr was refreshed");

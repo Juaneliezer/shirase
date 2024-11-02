@@ -1,8 +1,7 @@
 #include "login.cpp"
-#include <vector>
-
 #include <iostream>
 #include <ncurses.h>
+#include <vector>
 using namespace std;
 int main() {
   int ch;

@@ -1,3 +1,4 @@
+#include <iostream>
 #include <ncurses.h>
 #include <stdlib.h>
 void login() {
@@ -16,9 +17,9 @@ void login() {
   // setting window objects
   mvwprintw(winlog, 0, 22, "Log In");
   mvwprintw(winlog, 2, 3, "Username\n");
-  mvwprintw(winlog, 3, 3, "|");
+  // mvwprintw(winlog, 3, 3, "|");
   char User[80];
-  wgetstr(winlog, User);
+  mvwgetnstr(winlog, 3, 3, User, 30);
   noecho();
   mvwprintw(winlog, 7, 3, "anilist key\n");
   mvwprintw(winlog, 8, 3, "|");
